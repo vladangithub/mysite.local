@@ -40,11 +40,79 @@ echo gettype($q);
 
 echo gettype($x);
 $y = 1;
-echo gettype($y);*/
+echo gettype($y);
+
+
+
+//if ($shop)
+//
+//    echo "Go to shop";
+//    echo "Pay a bread";
+//echo "\nWent to home";
+
+$shop = "open";
+$money = true;
+
+if ($shop == "open" and $money)
+{
+    echo "Go to shop";
+    echo "Pay a bread";
+}
+echo "\nWent to home";
 
 $shop = true;
-if () {
+$money = false;
+
+if ($shop && $money)
+{
+    echo "Go to shop";
+    echo "\nPay a bread";
+} else{
+    echo "Go to Home";
+    echo "\nSee TV ";
+}*/
+
+$shop = true;
+$money = false;
+
+if ($shop)
+{
+    echo "Go to shop";
+} else{
+    echo "Go to Home";
 }
+
+echo ($shop) ? "Go to shop" : "Go to Home";
+
+echo isset($name) ? $name : "Unknown";
+echo $name ?? "Unknown";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
