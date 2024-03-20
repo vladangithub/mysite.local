@@ -3,12 +3,12 @@
 setlocale(LC_ALL, "russian");
 $day = strftime('%d');
 $mon = strftime('%B');
-$mon = iconv("windows-1251", "UTF-8", $mon);
+$mon = mb_strtolower(iconv("windows-1251", "UTF-8", $mon));
 $year = strftime('%Y');
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="RU">
 
 <head>
   <title>Сайт нашей школы</title>
@@ -32,7 +32,7 @@ $year = strftime('%Y');
     <!-- Область основного контента -->
     <blockquote>
         <?php
-echo "Сегодня ", $day, " число ", $mon, " месяц ", $year, " год ";
+echo "Сегодня $day число, $mon месяц, $year год ";
         ?>
     </blockquote>
     <h3>Зачем мы ходим в школу?</h3>
