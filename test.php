@@ -85,7 +85,7 @@ if ($shop)
 echo ($shop) ? "Go to shop" : "Go to Home";
 
 echo isset($name) ? $name : "Unknown";
-echo $name ?? "Unknown";*/
+echo $name ?? "Unknown";
 
 $a = 2;
 $b = 10;
@@ -99,6 +99,56 @@ if ($a > $b) {
 }
 
 
+$day = 2;
+if ($day == 1)
+    echo "Понедельник";
+elseif ($day == 2)
+    echo "Вторник";
+elseif ($day == 3)
+    echo "Среда";
+elseif ($day == 4)
+    echo "Четверг";
+elseif ($day == 5)
+    echo "Пятница";
+elseif ($day == 6)
+    echo "Суббота";
+elseif ($day == 7)
+    echo "Воскресенье";
+else
+    echo "Неизвестный день";
+
+$i = 1;
+switch ($i) {
+    case 0:
+        echo "Результат: 0";
+    case 1:
+        echo "Результат: 1";
+    case 2:
+        echo "Результат: 2";
+    case 3:
+        echo "Результат: 3";
+    case 4:
+        echo "Результат: 4";
+}
+
+
+$i = 20;
+
+switch ($i) {
+    case 0:
+        echo "Результат: 0"; break;
+    case 1:
+        echo "Результат: 1"; break;
+    case 2:
+        echo "Результат: 2"; break;
+    case 3:
+        echo "Результат: 3"; break;
+    case 4:
+        echo "Результат: 4"; break;
+    default:
+        echo "Результат: много";
+}
+*/
 
 
 

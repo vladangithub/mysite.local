@@ -9,7 +9,7 @@ $year = strftime('%Y');
 //Получаем текущий час в виде строки от 00 до  23 и приводим строку к целому числу от 00 до 23
 
 $hour = (int)strftime('%H');
-$welcome = ''; //Инициализируем переменную
+$welcome = ""; //Инициализируем переменную
 
 if ($hour >= 6 && $hour < 12) {
     $welcome = "Доброе утро";
@@ -20,6 +20,30 @@ if ($hour >= 6 && $hour < 12) {
 } else {
     $welcome = "Доброй ночи";
 }
+/* оптимизация кода
+
+$hour = (int)strftime('%H');
+$welcome = ""Доброй ночи""; //Инициализируем переменную
+
+if ($hour >= 6 && $hour < 12) {
+    $welcome = "Доброе утро";
+} elseif ($hour >= 12 && $hour < 18 ) {
+    $welcome = "Добрый день";
+} elseif ($hour >= 18 && $hour < 23) {
+    $welcome = "Добрый вечер";
+}
+
+$hour = (int)strftime('%H');
+$welcome = ""Доброй ночи""; //Инициализируем переменную
+
+if ($hour >= 6 && $hour < 12):
+    $welcome = "Доброе утро";
+elseif ($hour >= 12 && $hour < 18 ):
+    $welcome = "Добрый день";
+elseif ($hour >= 18 && $hour < 23):
+    $welcome = "Добрый вечер";
+endif;
+*/
 
 ?>
 
