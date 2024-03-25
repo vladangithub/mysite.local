@@ -70,7 +70,7 @@ if ($shop && $money)
 } else{
     echo "Go to Home";
     echo "\nSee TV ";
-}*/
+}
 
 $shop = true;
 $money = false;
@@ -85,9 +85,18 @@ if ($shop)
 echo ($shop) ? "Go to shop" : "Go to Home";
 
 echo isset($name) ? $name : "Unknown";
-echo $name ?? "Unknown";
+echo $name ?? "Unknown";*/
 
+$a = 2;
+$b = 10;
 
+if ($a > $b) {
+    echo "а больше, чем б";
+} elseif ($a == $b) {
+    echo "а равно б";
+} else {
+    echo "а меньше, чем б";
+}
 
 
 
