@@ -148,25 +148,33 @@ switch ($i) {
     default:
         echo "Результат: много";
 }
-*/
+
 $arr = array();
 $arr = [];
-$user = ["John", "root", "1234"];
+$user = [
+    "name" => "John",
+    "login" => "root",
+    "password" => "1234"
+        ];
 //echo $user[0];
-$user[] = 25;
+$user["age"] = 25;
 $user[] = true;
+//unset($user[27]);
 //echo count($user);
-print_r($user);
-//var_dump($user);
+//print_r($user);
+var_dump($user);
 
 
-
-
-
-//var_dump($user);
-
-
-
+$users[0] = [
+    "login" => "john",
+    "pass" => "1234"
+];
+$users[1] = [
+    "login" => "mike",
+    "pass" => "5678"
+];
+echo $users[1]["login"]; // mike
+*/
 
 
 
