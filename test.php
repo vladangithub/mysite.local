@@ -149,6 +149,22 @@ switch ($i) {
         echo "Результат: много";
 }
 */
+$arr = array();
+$arr = [];
+$user = ["John", "root", "1234"];
+//echo $user[0];
+$user[] = 25;
+$user[] = true;
+//echo count($user);
+print_r($user);
+//var_dump($user);
+
+
+
+
+
+//var_dump($user);
+
 
 
 
