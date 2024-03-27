@@ -183,10 +183,89 @@ echo $q;
 
 for ($i = 1; $i<=5; $i++){
     echo $i;
-}*/
-
-while () {
 }
+
+//$i = 1;
+//while ($i<=5) {
+//    echo $i . "</br>";
+//    $i++;
+//} 12345
+
+//$i = 1;
+//while ($i<=5) {
+//    echo $i++;
+//}  12345
+
+//$i = 1;
+//while ($i<=5) {
+//    echo ++$i;
+//}   23456
+
+for ($i = 1; $i<=5; $i++){
+    echo $i;
+};
+
+
+$i = 100;
+do {
+    echo $i++ . "</br>";
+} while ($i <= 110);
+
+
+$i = 1;
+while ($i <= 10) {
+    echo $i++ . "</br>";
+    if ($i == 5)
+        break;
+}
+
+ $q = 0;
+while ($q < 9) {
+    $q++;
+    if($q == 5)
+        continue;
+    echo $q . "</br>";
+}
+*/
+
+
+$i = 1; $j = 1;
+while ($j <= 10) {
+    while ($i <= 10) {
+        echo $i++;
+        if ($i == 5)
+            break 2;
+    }
+    $j++;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
