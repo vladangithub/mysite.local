@@ -226,7 +226,7 @@ while ($q < 9) {
         continue;
     echo $q . "</br>";
 }
-*/
+
 
 
 $i = 1; $j = 1;
@@ -238,6 +238,86 @@ while ($j <= 10) {
     }
     $j++;
 }
+
+$user = [
+    "name" => "John",
+    "login" => "root",
+    "password" => "1234"
+];
+
+$user["age"] = 25;
+$user[] = true;
+
+//foreach ( $user as $v ) {
+//    echo $v . "</br>";
+//}
+//John
+//root
+//1234
+//25
+//1
+
+foreach ( $user as $k => $v ) {
+    echo "$k : $v </br>";
+}
+//name : John
+//login : root
+//password : 1234
+//age : 25
+//0 : 1
+
+
+$nums = [1,2,3,4,5];
+print_r($nums);
+
+foreach ($nums as &$val)
+    $val *= 10;
+
+print_r($nums);
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
