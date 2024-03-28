@@ -1,12 +1,28 @@
 <?php
-$cols = 10;
-$rows = 10;
-$color = '#008080';
+//$cols = 10;
+//$rows = 10;
+//$color = '#008080';
+
+function draw_table($cols = 10, $rows = 10, $color = "#FFDB00") {
+    echo "<table border='1'>";
+    for ($tr = 1; $tr <= $rows; $tr++) {
+        echo "<tr>";
+        for ($td = 1; $td <= $cols; $td++) {
+            If($td == 1 || $tr == 1)
+                echo "<th bgcolor=$color>" . $td * $tr . "</th>";
+            else
+                echo "<td>" . $td * $tr . "</td>";
+        }
+        echo "</tr>";
+    }
+    echo "</table>";
+};
+
 ?>
 
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <title>Таблица умножения</title>
@@ -48,20 +64,27 @@ $color = '#008080';
 
 
 <?php
+/* Таблица умножения => in function draw_table
 echo "<table border='1'>";
 for ($tr = 1; $tr <= $rows; $tr++) {
     echo "<tr>";
     for ($td = 1; $td <= $cols; $td++) {
         If($td == 1 || $tr == 1)
-        echo "<th bgcolor=$color>" . $td * $tr . "</th>";
+            echo "<th bgcolor=$color>" . $td * $tr . "</th>";
         else
-        echo "<td>" . $td * $tr . "</td>";
+            echo "<td>" . $td * $tr . "</td>";
     }
     echo "</tr>";
 }
 echo "</table>";
+*/
+
+# draw_table();
+# draw_table(5, 5, "red");
+draw_table(14, 15, "#54626F");
 
 ?>
+
     <!-- Таблица -->
     <!-- Область основного контента -->
   </div>
