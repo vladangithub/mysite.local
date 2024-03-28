@@ -1,6 +1,101 @@
 <?php
 error_reporting(E_ALL);
 
+
+
+/*
+$name = "John";
+$GLOBALS ["name"] = "John";
+
+$var = "HELLO";
+$s = "hello";
+function vstring($var)
+{
+    $i = 0;
+    $len = strlen($var);
+    while ($i < $len)
+        echo $var{$i ++} . "</br>";
+};
+
+vstring("HGOIKHPKJHHOHOFUFUFLHLO");
+
+
+// Обращение к глобальным переменным: вариант 3
+function sayHello(&$name)
+{
+    echo "<h1>Hello, $name!</h1>";
+    $name = "Вася";
+}
+
+$name = "Mike";
+sayHello($name);
+echo $name; // Вася
+
+sayHello("John"); // ERROR!!!
+
+
+
+// Обращение к глобальным переменным: вариант 2
+function sayHello($name)
+{
+    echo "<h1>Hello, $name!</h1>";
+    $GLOBALS["name"] = "Вася";
+}
+
+$name = "Mike";
+sayHello($name);
+echo $name; // Вася
+
+
+
+$name = "John";
+$GLOBALS ["name"] = "John";
+
+$var = "HELLO";
+
+function vstring($var)
+{
+    $i = 0;
+    $len = strlen($var);
+    while ($i < $len)
+        echo $var{$i ++} . "</br>";
+};
+
+vstring("HGOIKHPKJHHOHOFUFUFLHLO");
+
+
+function sayHello($name)
+{
+    echo "<h1>Hello, $name!</h1>";
+    global $name, $x;
+    $name = "Вася";
+    $x = "AAA";
+}
+
+$name = "Mike";
+
+sayHello($name);
+
+echo $name . "</br>"; // Вася
+echo $x; // AAA
+
+
+function sayHello($name)
+{
+    echo "<h1>Hello, $name!</h1>";
+    $name = "Вася";
+}
+
+
+$name = "Mike";
+
+sayHello($name);
+
+echo $name; // Mike
+
+
+
+
 function say_hello($name = "Guest", $h = 3) {
     echo "<h$h>Hello, $name!</h$h>\n";
 };
@@ -12,7 +107,7 @@ $str = "say_hello";
 $str();
 
 
-/*
+
 echo strftime("%d-%b-%y, %A");
 
 
