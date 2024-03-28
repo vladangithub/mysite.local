@@ -1,8 +1,18 @@
 <?php
 error_reporting(E_ALL);
 
-/*
+function say_hello($name = "Guest", $h = 3) {
+    echo "<h$h>Hello, $name!</h$h>\n";
+};
 
+say_hello("John", 1);
+$n = "Mike";
+say_hello($n);
+$str = "say_hello";
+$str();
+
+
+/*
 echo strftime("%d-%b-%y, %A");
 
 
