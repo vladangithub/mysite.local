@@ -379,14 +379,38 @@ foreach ($nums as &$val)
     $val *= 10;
 
 print_r($nums);
+
+
+function test() {
+    $a = 0;
+    echo $a++;
+};
+
+test();
+test();
+test();
+
+function test() {
+    static $q = 0;
+    echo $q++;
+};
+
+test();
+test();
+test();
+
+
+
+function hello() {
+    static $cnt = 0;
+    echo "Функция исполняется: " . ++$cnt;
+    echo "Hello!\n";
+};
+
+hello();
+hello();
+hello();
 */
-
-
-
-
-
-
-
 
 
 
