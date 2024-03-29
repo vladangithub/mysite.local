@@ -1,4 +1,5 @@
 <?php
+//declare(strict_types=1); - Включение строгой типизации
 error_reporting(E_ALL);
 
 
@@ -410,18 +411,84 @@ function hello() {
 hello();
 hello();
 hello();
+
+
+
+function area_of_disk($r) {
+    return 3.14 * $r * $r;
+
+};
+function area_of_ring($big, $small) {
+    $b = area_of_disk($big);
+    $s = area_of_disk($small);
+    return $b - $s;
+
+};
+
+echo area_of_ring(5, 3);
+
+
+foo(1, 2, 3);
+
+function foo() {
+    $numargs = func_num_args();
+    echo "Всего аргументов: $numargs\n";
+
+    echo "Второй 
+          аргумент: " . func_get_arg(1) . "\n";
+
+    $args = func_get_args();
+    foreach ($args as $key => $value) {
+        echo "Аргумент $key : $value\n";
+    }
+};
+
+
+function foo(...$nums) {
+    foreach ($nums as $key => $value) {
+        echo "Аргумент $key : $value\n";
+    }
+}
+
+
+function foo(array $var) {
+    // Ожидается только массив!
+}
+
+function mult($num) {
+    return  $num * $num;
+}
+// PHP 5.4
+function bar(callable $var, $arg) {
+    return $var($arg);
+}
+bar("mult", 4);
+
+
+// PHP 7
+
+function foo(int $i, string $s, bool $b, int ...$nums):bool {
+    return $b;
+
+}
+
+// Включение строгой типизации
+declare(strict_types=1);
+
+
+function area_of_disk(int $r) {
+    return 3.14 * $r * $r;
+
+};
+function area_of_ring($big, $small) {
+    $b = area_of_disk($big);
+    $s = area_of_disk($small);
+    return $b - $s;
+
+};
+
+echo area_of_ring(5, 4);
 */
-
-
-
-
-
-
-
-
-
-
-
 
 
 

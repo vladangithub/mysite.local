@@ -54,6 +54,21 @@ $leftMenu = [
     ['link' => 'Калькулятор', 'href' => 'calc.php']
 ];
 
+function drawMenu($menu, $vertical = true) {
+    $style = "";
+    if(!$vertical)
+        $style = " style='display:inline; margin-right:15px;'";
+    echo "<ul>";
+    foreach ($menu as $item)
+    {
+        echo "<li$style>";
+        echo "<a href='$item[href]'>{$item['link']}</a>";
+        echo "</li>";
+    }
+    echo "</ul>";
+
+};
+
 
 ?>
 
@@ -64,6 +79,7 @@ $leftMenu = [
   <title>Сайт нашей школы</title>
   <meta charset="utf-8" />
   <link rel="stylesheet" href="style.css" />
+
 </head>
 
 <body>
@@ -104,20 +120,25 @@ echo "Сегодня $day число, $mon месяц, $year год ";
     <!-- Меню -->
   <?php
 
-  echo "<ul>";
-  foreach ($leftMenu as $item)
-  {
-      echo "<li>";
-      echo "<a href='$item[href]'>{$item['link']}</a>";
-      echo "</li>";
-  }
-  echo "</ul>";
-  ?>
+//  echo "<ul>";
+//  foreach ($leftMenu as $item)
+//  {
+//      echo "<li>";
+//      echo "<a href='$item[href]'>{$item['link']}</a>";
+//      echo "</li>";
+//  }
+//  echo "</ul>";
+
+  drawMenu($leftMenu);
+ ?>
     <!-- Меню -->
     <!-- Навигация -->
   </div>
   <div id="footer">
     <!-- Нижняя часть страницы -->
+      <?php
+      drawMenu($leftMenu, false);
+      ?>
     &copy; Супер Мега Веб-мастер, 2000 &ndash; <?= $year; ?>
     <!-- Нижняя часть страницы -->
   </div>
