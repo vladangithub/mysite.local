@@ -1,6 +1,19 @@
+BEFORE
+<?php
+
+require_once "test.inc.php";
+?>
+AFTER
+<?php
+
+require_once "test.inc.php";
+?>
+
+
+
 <?php
 //declare(strict_types=1); - Включение строгой типизации
-error_reporting(E_ALL);
+//error_reporting(E_ALL);
 
 
 
@@ -519,11 +532,11 @@ $str();
 echo 1 + print 2;
 
 echo 1 + echo 2;
-*/
+
 
 echo __FILE__;
-
-
+*/
+?>
 
 
 

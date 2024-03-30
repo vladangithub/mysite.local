@@ -1,0 +1,7 @@
+INCLUDED
+
+<?php
+function foo() {
+
+};
+?>
