@@ -501,20 +501,27 @@ var_dump(getdate(9999999999));
 
 
 echo time();
+
+
+
+$dt = mktime(0, 0, 0, 4, 29, 1978 );
+print_r(getdate($dt));
+echo date("d-m-Y");
+
+
+function foo()
+{
+};
+$str = 'foo';
+$str();
+
+
+echo 1 + print 2;
+
+echo 1 + echo 2;
 */
 
-
-
-
-
-
-
-
-
-
-
-
-
+echo __FILE__;
 
 
 
