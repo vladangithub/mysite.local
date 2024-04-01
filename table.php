@@ -1,7 +1,7 @@
 
 <?php
 # Лабораторная 5
-/*
+
 //$cols = 10;
 //$rows = 10;
 //$color = '#008080';
@@ -19,8 +19,8 @@ function draw_table($cols = 10, $rows = 10, $color = "#FFDB00") {
         echo "</tr>";
     }
     echo "</table>";
-};
-*/
+}
+
 ?>
 
 

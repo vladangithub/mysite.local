@@ -1,4 +1,14 @@
 <?php
+
+
+function myError($no, $msg, $file, $line) {
+    if ($no == E_USER_ERROR) {
+        echo "Так не должно быть";
+        $s = date("d-m-Y H:i:s") . " -$msg in $file:$line";
+        error_log("$s\n", 3, "error.log");
+    }
+}
+
 function draw_table($cols = 10, $rows = 10, $color = "#FFDB00") {
     echo "<table border='1'>";
     for ($tr = 1; $tr <= $rows; $tr++) {
@@ -12,7 +22,7 @@ function draw_table($cols = 10, $rows = 10, $color = "#FFDB00") {
         echo "</tr>";
     }
     echo "</table>";
-};
+}
 
 //$leftMenu = [
 //    ['link' => 'Домой', 'href' => 'index.php'],
@@ -40,13 +50,7 @@ function draw_table($cols = 10, $rows = 10, $color = "#FFDB00") {
 //
 //};
 
-function myError($no, $msg, $file, $line) {
-    if ($no == E_USER_ERROR) {
-        echo "Так не должно быть";
-        $s = date("d-m-Y H:i:s") . " -msg in $file:$line";
-        error_log("$s\n", 3, "error.log");
-    }
-};
+
 
 //drawMenu($leftMenu);
 //drawMenu($leftMenu, false);
