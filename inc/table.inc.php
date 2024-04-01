@@ -5,7 +5,7 @@
 //$cols = 10;
 //$rows = 10;
 //$color = '#008080';
-
+*/
 function draw_table($cols = 10, $rows = 10, $color = "#FFDB00") {
     echo "<table border='1'>";
     for ($tr = 1; $tr <= $rows; $tr++) {
@@ -20,5 +20,5 @@ function draw_table($cols = 10, $rows = 10, $color = "#FFDB00") {
     }
     echo "</table>";
 };
-*/
+
 

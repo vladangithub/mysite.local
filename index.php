@@ -60,20 +60,20 @@ $leftMenu = [
     ['link' => 'Калькулятор', 'href' => 'calc.php']
 ];
 
-function drawMenu($menu, $vertical = true) {
-    $style = "";
-    if(!$vertical)
-        $style = " style='display:inline; margin-right:15px;'";
-    echo "<ul>";
-    foreach ($menu as $item)
-    {
-        echo "<li$style>";
-        echo "<a href='$item[href]'>{$item['link']}</a>";
-        echo "</li>";
-    }
-    echo "</ul>";
-
-};
+//function drawMenu($menu, $vertical = true) {
+//    $style = "";
+//    if(!$vertical)
+//        $style = " style='display:inline; margin-right:15px;'";
+//    echo "<ul>";
+//    foreach ($menu as $item)
+//    {
+//        echo "<li$style>";
+//        echo "<a href='$item[href]'>{$item['link']}</a>";
+//        echo "</li>";
+//    }
+//    echo "</ul>";
+//
+//};
 
 
 ?>
@@ -126,7 +126,7 @@ function drawMenu($menu, $vertical = true) {
   </div>
   <div id="nav">
     <!-- Навигация -->
-    <h2>Навигация по сайту</h2>
+<!--    <h2>Навигация по сайту</h2>-->
       <?php require_once "inc/menu.inc.php";?>
     <!-- Меню -->
   <?php
