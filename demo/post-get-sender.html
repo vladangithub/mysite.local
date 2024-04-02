@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GET</title>
+</head>
+<body>
+        <h3>Отправка сообщения методом GET</h3>
+
+    <form action="post-get.php" method="GET">
+        <b>Имя:</b><br />
+        <input type="text" name="name"/><br />
+
+        <b>Email:</b><br />
+        <input type="text" name="email"/><br />
+
+        <b>Пол:</b><br />
+        <input type="radio" name="sex" value="1">Женский<br />
+        <input type="radio" name="sex" value="2">Мужской<br />
+
+        <input type="checkbox" name="save" value="1" checked />Запомнить<br />
+
+        <input type="submit"/>
+    </form>
+
+        <h3>Отправка сообщения методом POST</h3>
+
+        <form action="post-get.php" method="POST">
+            <b>Имя:</b><br />
+            <input type="text" name="name"/><br />
+
+            <b>Email:</b><br />
+            <input type="text" name="email"/><br />
+
+            <b>Пол:</b><br />
+            <input type="radio" name="sex" value="1">Женский<br />
+            <input type="radio" name="sex" value="2">Мужской<br />
+
+            <input type="checkbox" name="save" value="1" checked />Запомнить<br />
+
+            <input type="submit"/>
+        </form>
+</body>
+</html>

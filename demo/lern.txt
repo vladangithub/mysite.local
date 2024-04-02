@@ -1,2 +1,18 @@
 apache net beans
 afanasiev
+// Приём параметров QueryString
+echo $_GET['name'];
+echo $_GET['age'];
+
+
+// Приём параметров из тела запроса и их фильтрация
+$name = trim( strip_tags( $_POST['name'] ) );
+$age = (int) $_POST['age'];
+
+echo "<p>Ваше имя $name</p>";
+echo "<p>Вам $age лет</p>";
+
+
+// Каким методом был осуществлён запрос?
+if( $_SERVER['REQUEST_METHOD'] == 'POST' )
+	echo "Данные переданы методом POST";
