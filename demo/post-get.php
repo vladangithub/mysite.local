@@ -46,3 +46,6 @@ if (isset($_POST['name']))
     echo '<br />';
     echo "Запомнить = {$_POST['save']} <br /><br /><br />";
 }
+
+echo '<h2>$_REQUEST - содержит в себе либо GET либо POST в зависимости от того какими были переданы данные <h2/>' ;
+print_r($_REQUEST);
